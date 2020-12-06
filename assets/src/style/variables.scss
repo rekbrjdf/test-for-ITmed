@@ -1,0 +1,63 @@
+// Variables Bootstrap 4 
+
+$primary: #fff;
+
+$btn-border-width: 2px;
+$btn-border-radius: 50px;
+
+$navbar-padding-y: 20px;
+$navbar-padding-x: 30px;
+
+$navbar-nav-link-padding-x: 35px;
+
+$dropdown-link-active-color: #222;
+
+$input-btn-padding-x: 1rem;
+$input-btn-padding-y: 0;
+
+$active-background: #fff;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+); 
+
+$width-default: 100%;
+
+// Variables my
+
+$color-white: #ffffff; 
+
+@mixin green-gradient {
+    background: linear-gradient(to right, rgba(10,153,117,1) 0%, rgba(24,156,92,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a9975', endColorstr='#189c5c', GradientType=1 );
+	
+}
+
+@mixin arrow ($color, $size) {
+	content: "";
+	position: absolute;
+	top: $size;
+	right: 10px;
+	border: solid $color;
+	border-width: 0 2px 2px 0;
+	display: inline-block;
+	padding: 3px;
+	transform: rotate(45deg);
+}
+
+@mixin button-green {
+	font-family: 'Neris';
+	font-weight: 600;
+	font-size: 18px;
+	border: none;
+	@include green-gradient; 
+	&:visited,
+	&:hover {
+		background: #0a9974; 
+		color: $color-white;
+		box-shadow: 1px 7px 29px -16px rgba(53,196,158,1);
+	}
+}
